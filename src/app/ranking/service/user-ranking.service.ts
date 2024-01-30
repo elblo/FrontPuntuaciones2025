@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { UserRanking } from '../interface/user-ranking';
-import { Environment } from '../../../../enviroment';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserRankingService {
-  url: string = Environment.URL_ENDPOINT;
+  url: string = environment.URL_BASE;
 
   constructor(private http: HttpClient) {}
 

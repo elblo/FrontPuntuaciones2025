@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'ranking';
 
-  constructor(private router: Router) {}
-
-  isActive(route: string): boolean {
-    return this.router.url === route;
+  constructor() {}
+  ngOnInit(): void {
+    initFlowbite();
   }
 }
