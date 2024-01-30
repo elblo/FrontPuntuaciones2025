@@ -1,0 +1,19 @@
+/* mi-componente.component.css */
+
+.gold { background-color: #ffd700; }
+.silver { background-color: #c0c0c0; }
+.bronze { background-color: #cd7f32; }
+
+.mi-tabla {
+  min-width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+.mi-tabla th, .mi-tabla td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
