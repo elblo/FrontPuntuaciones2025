@@ -1,41 +1,45 @@
-@if (users.length==0) {
-<!-- mi-componente.component.html -->
-
-<div class="flex items-center justify-center h-[80vh]">
-    <div class="text-center">
-        <p class="text-6xl font-bold text-gray-600 opacity-40">No hay usuarios</p>
-        <p class="text-2xl text-gray-500 mt-2 opacity-40">Lamentablemente, no hay usuarios en el ranking.</p>
-    </div>
-</div>
-
-
-}@else{
-<div class="container mx-auto mt-8 text-center">
-    <button
-        class="bg-slate-900 hover:bg-slate-700 transition-colors text-2xl text-white font-bold py-4 px-8 rounded-full mx-auto mb-4"
-        (click)="actualizarTabla()">Actualizar</button>
-
-    <h1 class="text-6xl font-bold mb-8 text-center mt-4">Ranking Fruta</h1>
-
-    <div class="flex items-center justify-center">
-        <table class="min-w-[60vh] bg-white border border-gray-300 text-center">
-            <thead>
-                <tr class="bg-slate-900 text-white text-2xl">
-                    <th class="border-b px-4 py-2">Posición</th>
-                    <th class="border-b px-4 py-2 font-bold">Nombre</th>
-                    <th class="border-b px-4 py-2">Score</th>
-                </tr>
-            </thead>
-            <tbody>
-                @for (user of users; track $index) {
-                <tr class="text-center {{$index%2==0?'bg-slate-200':''}} text-2xl">
-                    <td class="border-b px-4 py-2">{{ $index+1 }}</td>
-                    <td class="border-b px-4 py-2">{{ user.name }}</td>
-                    <td class="border-b px-4 py-2">{{ user.score }}</td>
-                </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-</div>
+@if (users===null) {
+    
+}@else {
+    @if (users!.length==0) {
+        <!-- mi-componente.component.html -->
+        
+        <div class="flex items-center justify-center h-[80vh]">
+            <div class="text-center">
+                <p class="text-6xl font-bold text-gray-600 opacity-40">No hay usuarios</p>
+                <p class="text-2xl text-gray-500 mt-2 opacity-40">Lamentablemente, no hay usuarios en el ranking.</p>
+            </div>
+        </div>
+        
+        
+        }@else{
+        <div class="container mx-auto mt-8 text-center">
+            <button
+                class="bg-slate-900 hover:bg-slate-700 transition-colors text-2xl text-white font-bold py-4 px-8 rounded-full mx-auto mb-4"
+                (click)="actualizarTabla()">Actualizar</button>
+        
+            <h1 class="text-6xl font-bold mb-8 text-center mt-4">Ranking Fruta</h1>
+        
+            <div class="flex items-center justify-center">
+                <table class="min-w-[60vh] bg-white border border-gray-300 text-center">
+                    <thead>
+                        <tr class="bg-slate-900 text-white text-2xl">
+                            <th class="border-b px-4 py-2">Posición</th>
+                            <th class="border-b px-4 py-2 font-bold">Nombre</th>
+                            <th class="border-b px-4 py-2">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (user of users; track $index) {
+                        <tr class="text-center {{$index%2==0?'bg-slate-200':''}} text-2xl">
+                            <td class="border-b px-4 py-2">{{ $index+1 }}</td>
+                            <td class="border-b px-4 py-2">{{ user.name }}</td>
+                            <td class="border-b px-4 py-2">{{ user.score }}</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        }
 }

@@ -1,17 +1,23 @@
+@if (users===null) {
+
+}@else {
+
+
 @if (users.length==0) {
-    <div class="flex items-center justify-center h-[80vh]">
-        <div class="text-center">
-            <p class="text-6xl font-bold text-gray-600 opacity-40">No hay usuarios</p>
-            <p class="text-2xl text-gray-500 mt-2 opacity-40">Lamentablemente, no hay usuarios en el ranking.</p>
-        </div>
+<div class="flex items-center justify-center h-[80vh]">
+    <div class="text-center">
+        <p class="text-6xl font-bold text-gray-600 opacity-40">No hay usuarios</p>
+        <p class="text-2xl text-gray-500 mt-2 opacity-40">Lamentablemente, no hay usuarios en el ranking.</p>
     </div>
+</div>
 
 }@else{
-   <!-- mi-componente.component.html -->
+<!-- mi-componente.component.html -->
 
 
-   <div class="container mx-auto mt-8 text-center">
-    <button class="bg-slate-900 hover:bg-slate-700 transition-colors text-2xl text-white font-bold py-4 px-8 rounded-full mx-auto mb-4"
+<div class="container mx-auto mt-8 text-center">
+    <button
+        class="bg-slate-900 hover:bg-slate-700 transition-colors text-2xl text-white font-bold py-4 px-8 rounded-full mx-auto mb-4"
         (click)="actualizarTabla()">Actualizar</button>
 
     <h1 class="text-6xl font-bold mb-8 text-center mt-4">Ranking Reciclaje</h1>
@@ -37,4 +43,4 @@
         </table>
     </div>
 </div>
-}
+}}

@@ -8,7 +8,7 @@ import { UserRankingService } from '../../service/user-ranking.service';
   styleUrl: './ranking-reciclaje.component.css',
 })
 export class RankingReciclajeComponent {
-  users: UserRanking[] = [];
+  users: UserRanking[] | null = null;
 
   constructor(private userRankingService: UserRankingService) {
     this.userRankingService.getRankingReciclaje().subscribe((users) => {
