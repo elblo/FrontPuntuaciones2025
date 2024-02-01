@@ -14,11 +14,11 @@ const routes: Routes = [
         component: HomeComponent,
       },
       {
-        path: 'rankingFruta',
+        path: 'ranking-fruta',
         component: RankingFrutaComponent,
       },
       {
-        path: 'rankingReciclaje',
+        path: 'ranking-reciclaje',
         component: RankingReciclajeComponent,
 
       },
