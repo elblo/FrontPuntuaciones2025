@@ -7,6 +7,7 @@ import { RankingFrutaComponent } from './pages/ranking-fruta/ranking-fruta.compo
 import { RankingReciclajeComponent } from './pages/ranking-reciclaje/ranking-reciclaje.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './pages/admin/admin.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AdminComponent } from './pages/admin/admin.component';
   imports: [
     HttpClientModule,
     CommonModule,
-    RankingRoutingModule
+    RankingRoutingModule,
+    SharedModule
   ]
 })
 export class RankingModule { }

@@ -9,7 +9,7 @@ import { RankingModule } from './ranking/ranking.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     RankingModule,

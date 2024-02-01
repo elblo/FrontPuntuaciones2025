@@ -4,6 +4,7 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './component/footer/footer.component';
+import { SkeletonComponent } from './component/skeleton/skeleton.component';
 
 
 
@@ -11,6 +12,7 @@ import { FooterComponent } from './component/footer/footer.component';
   declarations: [
     NavbarComponent,
     FooterComponent,
+    SkeletonComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { FooterComponent } from './component/footer/footer.component';
   ],
   exports: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    SkeletonComponent
   ]
 })
 export class SharedModule { }

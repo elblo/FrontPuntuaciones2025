@@ -27,11 +27,16 @@ export class AdminComponent {
     }
   }
   borraDatosReciclaje() {
+    //un alert para confirmar que se quiere borrar los datos
+
+    alert('¿Estas seguro de que quieres borrar los datos?')
+
     this.service.resetReciclaje();
+
   }
   borraDatosFruta() {
     this.service.resetFruta();
-
   }
+
 
 }
