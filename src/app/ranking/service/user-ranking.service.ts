@@ -7,7 +7,13 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root',
 })
 export class UserRankingService {
+
+
+
+
   url: string = environment.URL_BASE;
+
+  logged:boolean = false;
 
   constructor(private http: HttpClient) {}
 
@@ -17,5 +23,14 @@ export class UserRankingService {
 
   getRankingReciclaje() {
     return this.http.get<UserRanking[]>(this.url + 'reciclaje');
+  }
+
+  resetFruta() {
+    this.http.delete(this.url + 'fruta').subscribe();
+    alert('Datos de fruta correctamente')
+  }
+  resetReciclaje() {
+    this.http.delete(this.url + 'reciclaje').subscribe();
+    alert('Datos de basura correctamente')
   }
 }

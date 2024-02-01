@@ -2,6 +2,8 @@
 <div class="container mx-auto p-4">
   <router-outlet></router-outlet>
 </div>
+<app-footer></app-footer>
+
 
 
 
@@ -12,7 +14,7 @@
 <!-- <div class="bg-gray-200 p-4">
   <nav class="flex items-center justify-between">
     <a routerLink="/" class="text-gray-800 text-xl font-bold hover:text-gray-600 transition">Inicio</a>
-    
+
     <div class="flex space-x-4">
       <a routerLink="/rankingFruta" class="text-gray-800 hover:text-gray-600 transition {{ isActive('/rankingFruta') ? 'font-bold underline' : '' }}">Ranking Fruta</a>
       <a routerLink="/rankingReciclaje" class="text-gray-800 hover:text-gray-600 transition {{ isActive('/rankingReciclaje') ? 'font-bold underline' : '' }}">Ranking Reciclaje</a>

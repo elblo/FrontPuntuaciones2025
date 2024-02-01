@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { RankingFrutaComponent } from './pages/ranking-fruta/ranking-fruta.component';
 import { RankingReciclajeComponent } from './pages/ranking-reciclaje/ranking-reciclaje.component';
 import {  HttpClientModule } from '@angular/common/http';
+import { AdminComponent } from './pages/admin/admin.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import {  HttpClientModule } from '@angular/common/http';
     HomeComponent,
     RankingFrutaComponent,
     RankingReciclajeComponent,
+    AdminComponent,
   ],
   imports: [
     HttpClientModule,

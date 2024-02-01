@@ -1,3 +1,3 @@
 export const environment = {
-    URL_BASE: 'https://ranking-fernando3martos.up.railway.app/ranking/',
+    URL_BASE: 'https://ecofernando3martos.onrender.com/ranking/',
 };
