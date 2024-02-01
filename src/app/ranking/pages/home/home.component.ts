@@ -6,8 +6,6 @@ import { UserRankingService } from '../../service/user-ranking.service';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent implements OnInit {
-  constructor(private userRankingService: UserRankingService) {}
-  ngOnInit(): void {
-  }
+export class HomeComponent  {
+
 }
