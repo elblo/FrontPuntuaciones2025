@@ -1,0 +1,28 @@
+@if(!logged){
+<div class="h-[80vh] flex">
+  <div class="border mx-auto my-auto p-12 rounded-md shadow-xl">
+    <form class="flex flex-col">
+      <label class="p-3 text-xl md:text-3xl" for="usuario">Usuario</label>
+      <input #username class="p-3 text-xl md:text-3xl border rounded-md" type="text" name="usuario" placeholder="usuario">
+      <label class="p-3 text-xl md:text-3xl" for="password">Contraseña</label>
+      <input #password class="p-3 text-xl md:text-3xl border rounded-md" type="password" name="password" placeholder="contraseña">
+      <button (click)="login(username.value,password.value)"
+        class="text-xl lg:text-3xl border rounded-md mt-3 bg-[#9bc049] p-2 hover:bg-lime-700 transition-colors">Iniciar sesión</button>
+    </form>
+  </div>
+</div>
+}
+@else{
+<div class="w-full h-[80vh] flex">
+  <div class="w-[40vw] mx-[5vw] mt-[25vh] text-center">
+    <button (click)="borraDatosFruta()"
+      class="border p-10 rounded-md bg-[#9bc049] text-2xl font-bold shadow-xl hover:bg-lime-700 transition-colors">Borrar
+      la tabla Fruta</button>
+  </div>
+  <div class="w-[40vw] mx-[5vw] mt-[25vh] text-center">
+    <button (click)="borraDatosReciclaje()"
+      class="border p-10 rounded-md bg-[#9bc049] text-2xl font-bold shadow-xl hover:bg-lime-700 transition-colors">Borrar
+      la tabla reciclaje</button>
+  </div>
+</div>
+}

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { RankingFrutaComponent } from './pages/ranking-fruta/ranking-fruta.component';
 import { RankingReciclajeComponent } from './pages/ranking-reciclaje/ranking-reciclaje.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 const routes: Routes = [
   {
@@ -19,9 +20,12 @@ const routes: Routes = [
       {
         path: 'rankingReciclaje',
         component: RankingReciclajeComponent,
-      
-      },
 
+      },
+      {
+        path: 'admin',
+        component: AdminComponent,
+      },
       {
         path: '**',
         redirectTo: 'inicio',
