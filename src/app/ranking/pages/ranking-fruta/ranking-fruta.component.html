@@ -23,7 +23,7 @@
         <div class="flex items-center justify-center">
             <table class="w-full md:max-w-[80vh] bg-white border border-gray-300 text-center">
                 <thead>
-                    <tr class="bg-slate-900 text-white text-xl">
+                    <tr class="bg-slate-900 text-white">
                         <th class="border-b px-2 md:px-4 py-2">Posición</th>
                         <th class="border-b px-2 md:px-4 py-2 font-bold">Nombre</th>
                         <th class="border-b px-2 md:px-4 py-2">Puntos</th>
@@ -35,7 +35,7 @@
                 </thead>
                 <tbody>
                     @for (user of users; track $index) {
-                    <tr class="text-center {{$index%2==0?'bg-slate-200':''}} text-xl">
+                    <tr class="text-center {{$index%2==0?'bg-slate-200':''}}">
                         <td class="border-b px-2 md:px-4 py-2">{{ $index+1 }}</td>
                         <td class="border-b px-2 md:px-4 py-2">{{ user.name }}</td>
                         <td class="border-b px-2 md:px-4 py-2">{{ user.score }}</td>
